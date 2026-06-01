@@ -64,14 +64,3 @@ Python 3, Pandas, NumPy, Matplotlib, Seaborn, Plotly
 | Multicollinearity | Pclass and Fare are inversely correlated (−0.55) — expected since richer = 1st class |
 
 ---
-
-## Interview Questions — Quick Answers
-
-1. **Purpose of EDA:** Understand data structure, detect anomalies, discover patterns, and decide feature engineering strategies before modeling.
-2. **Boxplots:** Show median, IQR, and outliers. Help compare distributions across groups quickly.
-3. **Correlation:** Measures linear relationship between two variables (−1 to +1). Useful for feature selection and detecting multicollinearity.
-4. **Detect skewness:** Use `.skew()` in pandas, or visually via histogram. Positive skew = right tail; negative = left tail.
-5. **Multicollinearity:** When two or more features are highly correlated with each other (e.g., Pclass and Fare). Problematic for linear models.
-6. **EDA Tools:** Pandas (stats), Matplotlib/Seaborn (static plots), Plotly (interactive charts), Sweetviz/Pandas Profiling (automated EDA).
-7. **EDA finding a problem:** In the Titanic dataset, EDA revealed the Cabin column was 77% missing — without EDA we'd have tried to use it and gotten a poor model.
-8. **Visualization in ML:** Helps verify data quality, understand distributions, identify outliers, and communicate findings to non-technical stakeholders.
