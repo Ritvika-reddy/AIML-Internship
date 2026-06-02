@@ -53,13 +53,3 @@ Removed `PassengerId`, `Name`, `Ticket` — these have no predictive value for M
 ## Final Dataset Shape
 - **607 rows × 9 columns**, zero missing values
 
-## Interview Questions — Quick Answers
-
-1. **Types of missing data:** MCAR (Missing Completely At Random), MAR (Missing At Random), MNAR (Missing Not At Random)
-2. **Handle categorical variables:** Label Encoding (ordinal/binary), One-Hot Encoding (nominal), Target Encoding (high cardinality)
-3. **Normalization vs Standardization:** Normalization scales to [0,1] (MinMax); Standardization centers at mean=0, std=1 (Z-score). Use standardization when data has outliers; normalization when distribution is uniform.
-4. **Detect outliers:** IQR method, Z-score, boxplots, scatter plots
-5. **Preprocessing importance:** Garbage in = garbage out. Clean data leads to better model accuracy and faster convergence.
-6. **One-Hot vs Label Encoding:** Label encoding assigns integers (can imply order); One-Hot creates binary columns per category (no order implied). Use OHE for nominal, Label for ordinal/binary.
-7. **Data imbalance:** Oversample minority (SMOTE), undersample majority, use class weights in model, or use metrics like F1/AUC instead of accuracy.
-8. **Preprocessing & accuracy:** Yes — encoding errors, unscaled features, and unhandled nulls can degrade accuracy significantly.
