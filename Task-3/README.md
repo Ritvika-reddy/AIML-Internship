@@ -82,14 +82,3 @@ Python 3, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
 - No severe multicollinearity detected (no feature pair has correlation > 0.8)
 
 ---
-
-## Interview Questions — Quick Answers
-
-1. **Assumptions of Linear Regression:** Linearity, independence of errors, homoscedasticity (constant variance), normality of residuals, no multicollinearity.
-2. **Interpret coefficients:** Each coefficient = change in target per 1-unit change in that feature (when all others are held constant). Standardized coefficients allow fair comparison of feature importance.
-3. **R² score:** Proportion of variance in target explained by the model. R²=0.65 means the model explains 65% of price variation. Closer to 1 is better.
-4. **MSE vs MAE:** Prefer MSE when large errors are especially bad (it penalizes them more due to squaring). Prefer MAE for robustness to outliers since it treats all errors equally.
-5. **Detect multicollinearity:** Use correlation matrix (|r| > 0.7 is a flag), or calculate VIF (Variance Inflation Factor). VIF > 5 or 10 indicates multicollinearity.
-6. **Simple vs Multiple Regression:** Simple = one feature predicting the target; Multiple = two or more features. Multiple can capture more complex relationships.
-7. **Linear Regression for classification?** Not recommended directly. Logistic Regression is the proper choice. However, you can threshold LR output but it's unreliable and violates assumptions.
-8. **Violating assumptions:** Leads to biased or inefficient estimates — predictions may be systematically wrong, confidence intervals invalid, and p-values unreliable.
