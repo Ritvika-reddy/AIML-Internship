@@ -96,4 +96,3 @@ Tested thresholds from 0.1 to 0.85. In a **medical context**, lowering the thres
 ---
 
 
-8. **Multi-class Logistic Regression:** Yes — using One-vs-Rest (OvR) or Softmax (Multinomial). Scikit-learn handles this automatically with `multi_class='ovr'` or `'multinomial'`.
