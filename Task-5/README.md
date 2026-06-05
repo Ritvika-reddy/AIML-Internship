@@ -86,29 +86,3 @@ Python 3, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
 | `dt_07_rf_n_trees.png` | RF accuracy vs number of trees (diminishing returns) |
 
 ---
-
-## Interview Questions — Quick Answers
-
-1. **How does a decision tree work?** It splits data at each node by the feature that best separates the classes (highest information gain or lowest Gini). Continues until leaves are pure or max depth is reached. Follows a flowchart-like if-else structure.
-
-2. **Entropy and Information Gain:**
-   - **Entropy** = −Σ p·log₂(p) — measures impurity/uncertainty in a node (0=pure, 1=max mix)
-   - **Information Gain** = Entropy(parent) − weighted average Entropy(children)
-   - The split that maximizes IG is chosen at each node.
-
-3. **Random Forest vs single tree:** RF trains many trees on random bootstrap samples (bagging) and random feature subsets. Final prediction = majority vote. This reduces variance, prevents overfitting, and gives much more stable predictions than a single tree.
-
-4. **Overfitting & prevention:**
-   - Overfitting = model learns training data too well, fails on new data
-   - For trees: control `max_depth`, `min_samples_split`, `min_samples_leaf`
-   - RF naturally reduces overfitting via ensemble averaging
-
-5. **Bagging (Bootstrap Aggregating):** Train multiple models on different random subsets of training data (with replacement). Aggregate predictions by voting (classification) or averaging (regression). Reduces variance without increasing bias.
-
-6. **Visualize a decision tree:** Use `sklearn.tree.plot_tree()` (matplotlib) or `export_graphviz()` + Graphviz. Shows splits, impurity, samples, and class distribution at each node.
-
-7. **Feature importance:** Measures how much each feature reduces impurity across all splits it is used in, weighted by the number of samples. Higher = more important. RF averages this over all 100 trees → more reliable than single tree.
-
-8. **Pros/Cons of Random Forests:**
-   - ✅ Pros: High accuracy, handles missing values, no scaling needed, robust to outliers, gives feature importances, reduces overfitting
-   - ❌ Cons: Slower to train/predict than single tree, less interpretable (black box), high memory usage, not ideal for very sparse data
