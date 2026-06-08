@@ -71,35 +71,6 @@ Only 1 misclassification: 1 Virginica predicted as Versicolor.
 
 ---
 
-## Interview Q&A (Quick Reference)
-
-**Q1. How does KNN work?**
-KNN stores all training data. For a new point, it finds the K nearest neighbors using a distance metric and assigns the majority class.
-
-**Q2. How to choose K?**
-Plot accuracy vs K values (elbow method). Odd K avoids ties. Cross-validation helps find the best K.
-
-**Q3. Why is normalization important?**
-KNN uses distances. Features with larger scales dominate. Normalization puts all features on the same scale.
-
-**Q4. Time complexity of KNN?**
-Training: O(1). Prediction: O(n·d) per query, where n = training samples, d = features.
-
-**Q5. Pros and Cons?**
-- Pros: Simple, no training phase, naturally handles multi-class
-- Cons: Slow prediction on large data, sensitive to irrelevant features and scale
-
-**Q6. Is KNN sensitive to noise?**
-Yes. Noisy/outlier points can misclassify neighbors. Larger K reduces noise sensitivity.
-
-**Q7. Multi-class handling?**
-KNN handles multi-class natively via majority vote among K neighbors.
-
-**Q8. Role of distance metrics?**
-Euclidean is standard. Manhattan suits high-dimensional data. Cosine suits text. The metric defines what "close" means.
-
----
-
 ## Files in This Repo
 ```
 ├── knn_iris.py                  # Main Python script
